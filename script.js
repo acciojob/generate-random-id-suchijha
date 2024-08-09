@@ -1,14 +1,12 @@
 function makeid(l) {
-  // write your code here
-let str="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
-let password=" ";
-	for(let i=1;i<=l;i++){
-    const random = Math.floor(Math.random() * strLength);
-		password=password+str[random];
-		
-	}
-return password;
-	
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const charactersLength = characters.length;
+    for (let i = 0; i < l; i++) {
+        const randomIndex = Math.floor(Math.random() * charactersLength);
+        result += characters[randomIndex];
+    }
+    return result;
 }
 
 // Do not change the code below.
